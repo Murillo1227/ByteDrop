@@ -1,0 +1,201 @@
+/* Importar Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Verdana:wght@300;400;600&display=swap');
+
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+/* Contenedor del formulario */
+#box1 {
+    background-color: rgba(31, 31, 31, 0.3);
+    width: 370px;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px #fafafa1d;
+    text-align: center;
+}
+
+/* Título */
+#frede {
+    color: azure;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px #fafafa68;
+}
+
+/* Formularios */
+form label {
+    display: block;
+    color: azure;
+    text-shadow: 0 0 5px;
+    text-align: left;
+    margin: 10px 0 5px;
+}
+
+form input {
+    width: 100%;
+    height: 35px;
+    font-size: 17px;
+    border-radius: 0 20px 0 20px;
+    padding: 5px;
+    box-shadow: 0 0 10px #ffffff77;
+    border: 3px solid #00ffaeb7;
+    background-color: rgba(77, 77, 77, 0.25);
+    color: #fff;
+    outline: none;
+    transition: 0.3s;
+}
+
+form input:focus {
+    background-color: #5f5c5cea;
+    color: #00ffaeb7;
+}
+
+/* Botón de inicio de sesión */
+#submit {
+    width: 100%;
+    background: rgba(77, 77, 77, 0.25);
+    color: #f4f4f4ce;
+    font-size: 1.1em;
+    font-weight: bold;
+    padding: 10px;
+    border: 3px solid #00ffaeb7;
+    border-radius: 0 20px;
+    cursor: pointer;
+    margin-top: 15px;
+    box-shadow: 0 0 10px #fafafa68;
+    text-shadow: 0 0 5px #6dffd1be;
+    transition: 0.3s;
+}
+
+#submit:hover {
+    background-color: #5f5c5cea;
+    color: #00ffaeb7;
+}
+
+/* Enlace de registro */
+p {
+    margin-top: 15px;
+    font-size: 0.9em;
+}
+
+p a {
+    color: azure;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+p a:hover {
+    color: aquamarine;
+    text-shadow: 0 0 4px;
+    text-decoration: underline;
+    font-size: 15px;
+}
+
+/* Estilos del menú lateral */
+.slide {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background: #111;
+    color: white;
+    transition: 0.3s;
+    padding-top: 60px;
+}
+
+h2 {
+    color: #fff;
+    font-weight: 880;
+    text-align: right;
+    padding: 10px 0;
+    padding-right: 30px;
+    pointer-events: none;
+    text-shadow: 0 0 5px #fff;
+  }
+  
+  ul, li {
+    list-style: none;
+  }
+  
+  ul li a {
+    font-weight: 500;
+    color: #ffffff;
+    display: block;
+    padding: 10px 20px;
+    text-transform: capitalize;
+    text-decoration: none;
+    transition: 0.4s ease-out;
+    text-shadow: 0 0 5px #68ffac;
+  }
+  
+  ul li a:hover {
+    background: #6e6e6e;
+    border-radius: 15px;
+    box-shadow: 0 8px #0000002f;
+  }
+
+.slide ul li a i {
+    font-size: 1.2em;
+}
+
+/* Toggle del menú */
+#menu-toggle {
+    display: none;
+}
+
+.toggle {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.toggle span {
+    display: block;
+    background: white;
+    height: 5px;
+    margin: 6px 0;
+    transition: 0.3s;
+}
+
+/* Mostrar menú cuando se activa */
+#menu-toggle:checked ~ .slide {
+    left: 0;
+}
+
+/* Animaciones del botón de menú */
+#menu-toggle:checked + .toggle .top_line {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+#menu-toggle:checked + .toggle .middle_line {
+    opacity: 0;
+}
+
+#menu-toggle:checked + .toggle .bottom_line {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    #box1 {
+        width: 90%;
+    }
+}

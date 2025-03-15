@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión</title>
+    <link rel="stylesheet" href="regist.css">
+    <script type="module" src="./firebase-config.js"></script>
+
+</head>
+<body>
+
+    <div class="container">
+        <h2>Iniciar Sesión</h2>
+        <button id="google-signin-btn">Iniciar con Google</button>
+        <button id="github-signin-btn">Iniciar con GitHub</button>
+        <button id="logout">Cerrar Sesión</button>
+        <p id="user-info"></p>
+    </div>
+
+    <!-- Firebase y autenticación -->
+    <script type="module">
+        import { signInWithGoogle, signInWithGitHub, logOut } from "./Auth.js";
+        
+
+        document.addEventListener("DOMContentLoaded", () => {
+            document.getElementById("google-signin-btn").addEventListener("click", signInWithGoogle);
+            document.getElementById("github-signin-btn").addEventListener("click", signInWithGitHub);
+            document.getElementById("logout-btn").addEventListener("click", logOut);
+        });
+    </script>
+
+</body>
+</html>
+
+

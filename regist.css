@@ -1,0 +1,94 @@
+/* Reset de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    background-color: black;
+    color: azure;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Contenedor principal */
+.container {
+    background-color: rgba(31, 31, 31, 0.6);
+    width: 380px;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 255, 174, 0.2);
+    text-align: center;
+    backdrop-filter: blur(10px);
+}
+
+/* Título */
+h2 {
+    color: azure;
+    text-shadow: 0 0 10px rgba(0, 255, 174, 0.8);
+    margin-bottom: 20px;
+}
+
+/* Inputs */
+input {
+    width: 85%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    margin: 10px 0;
+    border: none;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    box-shadow: 0 0 10px rgba(0, 255, 174, 0.5);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Efecto al enfocar el input */
+input:focus {
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 15px rgba(0, 255, 174, 0.8);
+}
+
+/* Botones */
+button {
+    width: 85%;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+    text-shadow: 0 0 5px rgba(0, 255, 174, 0.8);
+    color: white;
+    background-color: rgba(77, 77, 77, 0.3);
+    box-shadow: 0 0 10px rgba(0, 255, 174, 0.5);
+    border-bottom: 3px solid rgba(0, 255, 174, 0.8);
+    border-left: 3px solid rgba(0, 255, 174, 0.8);
+}
+
+/* Efecto hover */
+button:hover {
+    background-color: rgba(95, 92, 92, 0.8);
+    color: rgba(0, 255, 174, 0.8);
+    box-shadow: 0 0 15px rgba(0, 255, 174, 0.8);
+}
+
+/* Información del usuario */
+#user-info {
+    margin-top: 15px;
+    font-size: 14px;
+    color: lightgray;
+}
+
+/* Responsivo */
+@media (max-width: 420px) {
+    .container {
+        width: 90%;
+    }
+}

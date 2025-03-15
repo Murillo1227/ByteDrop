@@ -1,0 +1,281 @@
+body{
+    background-color: black;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+    color: azure;
+  }
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.listas {
+  width: 100vw;
+  overflow-x: scroll;
+  white-space: nowrap;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.listas::-webkit-scrollbar {
+  display: none;
+}
+
+#fred{
+    color: azure;
+    text-align: center;
+    margin: auto;
+    background-color: #0000007f;
+    width: 100%;
+    height: 65px;
+    border-radius: 0 0 20px 20px;
+    border-bottom: solid 2px #fff;
+    box-shadow: 0 0 15px 2px #9cfdc96f;
+    text-shadow: 0 0 15px #5cffa8a5;
+}
+
+#btn2{
+    width: 80px;
+    height: 50px;
+    border-radius: 20px;
+    border: solid #0000007d 1px;
+    margin: 0;
+    margin-left: 75%;
+    background-color: azure;
+    box-shadow: 0 0 15px #000000c4;
+    text-shadow: 0 0 5px #03ffc4aa;
+}
+
+#btn1{
+    text-decoration: none;
+    text-shadow: 0 0 10px #54ffd7;
+    color: #00663f;
+}
+
+/* Reinicio de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  
+  /* Menú Lateral */
+  .slide {
+    height: 100%;
+    width: 180px;
+    position: absolute;
+    background: #323232d7;
+    transform: translateX(-150%);
+    transition: 1.5s ease;
+    border-radius: 0 20px 20px 0;
+    box-shadow: 0 0 15px 1px #9cfdc96f;
+    border: #78ffc594 solid 1px;
+  }
+  
+  h2 {
+    color: #fff;
+    font-weight: 880;
+    text-align: right;
+    padding: 10px 0;
+    padding-right: 30px;
+    pointer-events: none;
+    text-shadow: 0 0 5px #fff;
+  }
+  
+  ul, li {
+    list-style: none;
+  }
+  
+  ul li a {
+    font-weight: 500;
+    color: #ffffff;
+    display: block;
+    padding: 10px 20px;
+    text-transform: capitalize;
+    text-decoration: none;
+    transition: 0.4s ease-out;
+    text-shadow: 0 0 5px #68ffac;
+  }
+  
+  ul li a:hover {
+    background: #6e6e6e;
+    border-radius: 15px;
+    box-shadow: 0 8px #0000002f;
+    border: #96ffc097 solid 1px;
+  }
+  
+  /* Ocultar el input del toggle */
+  #menu-toggle{
+    display: none;
+  }
+  
+  /* Botón Toggle */
+  .toggle {
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    background: #181818e1;
+    cursor: pointer;
+    z-index: 1;
+    border-radius: 2px;
+    top: 20px;
+    left: 15px;
+    box-shadow: 0 0 10px #56ffb3;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centra las líneas */
+  }
+  
+  .toggle .common {
+    position: absolute;
+    height: 2px;
+    width: 20px;
+    background: #69ffb2;
+    transition: 0.3s ease;
+    border-radius: 50px;
+  }
+  
+  /* Posiciones iniciales de las líneas */
+  .toggle .top_line {
+    transform: translateY(-6px); /* Línea superior */
+  }
+  
+  .toggle .middle_line {
+    transform: translateY(0); /* Línea central */
+  }
+  
+  .toggle .bottom_line {
+    transform: translateY(6px); /* Línea inferior */
+  }
+  
+  /* Estado del menú abierto */
+  input:checked ~ .toggle .top_line {
+    transform: rotate(45deg); /* Rotación para formar la "X" */
+  }
+  
+  input:checked ~ .toggle .middle_line {
+    opacity: 0; /* Oculta la línea del medio */
+  }
+  
+  input:checked ~ .toggle .bottom_line {
+    transform: rotate(-45deg); /* Rotación para formar la "X" */
+  }
+  
+  /* Menú Lateral Visible */
+  input:checked ~ .slide {
+    transform: translateX(0);
+  }
+  
+
+#btn2:hover{
+    background-color: #76ffd1c7;
+    border-radius: 10px;
+    text-shadow: 0 0 5px #000000;
+    transition: 0.8s;
+    color: #40ffdfa4;
+    box-shadow: 0 0 15px #34ff9a;
+    padding: 10px;
+}
+
+.toggle:hover{
+  background-color: #8e8e8eb0;
+  box-shadow: 0 0 10px #dafffa;
+  border-radius: 5px;
+  transition: 0.2s;
+  border: 1px solid #00ff40;
+
+}
+
+footer {
+  background: #2828285a;
+  color: azure;
+  text-align: center;
+  padding: 15px;
+  font-size: 14px;
+  margin-top: 40px;
+  box-shadow: 0 0 15px 2px #334b3a;
+  border-radius: 10px;
+}
+
+footer a {
+  color: #2ac182;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+.social-icons {
+  margin: 10px 0;
+}
+
+.social-icons a {
+  color: azure;
+  font-size: 20px;
+  margin: 0 10px;
+  transition: 0.5s;
+}
+
+.social-icons a:hover {
+  color: #00ff99c9;
+}
+
+img{
+  width: 70px;
+  height: 70px;
+  margin-left: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 20px;
+  box-shadow: 0 0 8px #2ac182;
+  border: 2px solid #41f84d8c;
+}
+
+img:hover{
+  box-shadow: 0 0 10px #bdbdbd;
+  width: 75px;
+  height: 75px;
+  transition: 0.4s;
+  border: 2px solid #fff;
+}
+
+.logos{
+  color: azure;
+  font-size: 18px;
+  text-shadow: 0 0 5px #00ff40;
+  margin-left: 20px;
+  text-decoration: none;
+}
+
+.steanm{
+  text-decoration: none;
+  color: azure;
+  text-shadow: 0 0 5px #00ff40;
+  margin-left: 20px;
+  font-size: 12px;
+}
+
+a{ 
+  text-decoration: none;
+}
+
+.listas{
+  overflow-x: auto;
+  overscroll-behavior: smooth;
+  display: flex;
+  background-color: #2d2d2d40;
+  width: 100%;
+  height: 200px;
+  box-shadow: 0 1px 10px #36ffa153;
+  margin-top: 30px;
+}
+
+.box{
+  color: #ffffff;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 20px;
+  margin-left: 10px;
+  margin-top: 0px;
+
+}
